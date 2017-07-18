@@ -11,3 +11,16 @@
 *.lai
 *.la
 *.a
+
+#vs compile 
+*.ncb
+*.opt
+*.plg
+*.user
+*.aps
+*.clw
+*.scc
+*.suo
+x64
+Release
+Debug

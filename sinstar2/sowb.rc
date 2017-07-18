@@ -1,0 +1,603 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_FLAG                ICON    DISCARDABLE     "res\\sinstar2.ICO"
+IDI_SETTINGS            ICON    DISCARDABLE     "res\\settings.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROP_ABOUT DIALOG DISCARDABLE  0, 0, 300, 156
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 11, "宋体"
+BEGIN
+    LTEXT           "服务器版本:",IDC_STATIC,30,38,43,8
+    LTEXT           "1.0.0.1",IDC_VER_SVR,76,38,46,8
+    LTEXT           "输入法版本:",IDC_STATIC,30,26,43,8
+    LTEXT           "2.0.0.1",IDC_VER_IME,76,27,46,8
+    LTEXT           "启程软件:因为努力,所以美丽!",IDC_STATIC,7,55,103,8
+    LTEXT           "版权所有(C):启程软件 2004-2009",IDC_STATIC,7,96,150,8
+    ICON            IDI_FLAG,IDC_STATIC,7,26,20,20
+    CTEXT           "与狼共舞\n玉树临风\n晴天",IDC_STATIC,140,41,58,33
+    GROUPBOX        "感谢",IDC_STATIC,128,26,95,53,BS_CENTER
+    LTEXT           "http://www.setoutsoft.cn",IDC_HOMESITE,7,69,97,8
+    LTEXT           "mailto:setoutsoft@qq.com",IDC_EMAIL,7,82,97,8
+    LTEXT           "启程五笔——启程输入之星五笔优化版",IDC_STATIC,7,7,129,
+                    8
+END
+
+IDD_PROP_CUSTOM DIALOG DISCARDABLE  0, 0, 295, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "使用习惯"
+FONT 11, "宋体"
+BEGIN
+    GROUPBOX        "输入法开关",IDC_STATIC,7,7,100,43,WS_GROUP
+    CONTROL         "左SHIFT",IDC_SW_LSHIFT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,19,40,10
+    CONTROL         "右SHIFT",IDC_SW_RSHIFT,"Button",BS_AUTORADIOBUTTON,61,
+                    19,39,10
+    CONTROL         "禁用",IDC_SW_DISABLE,"Button",BS_AUTORADIOBUTTON,14,33,
+                    39,10
+    CONTROL         "重码自动上屏",IDC_AUTO_INPUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,57,60,10
+    CONTROL         "拼音重码词组优先",IDC_PYCAND_PHRASEFIRST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,72,76,10
+    GROUPBOX        "形码回车",IDC_STATIC,113,7,107,29
+    CONTROL         "清除编码",IDC_ENTER_CLEAR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,121,19,46,10
+    CONTROL         "编码上屏",IDC_ENTER_INPUT,"Button",BS_AUTORADIOBUTTON,
+                    169,19,42,10
+    LTEXT           "形码临时拼音\n拼音笔画辅助",IDC_STATIC,7,88,49,18
+    COMBOBOX        IDC_TP_KEY,61,90,48,47,CBS_DROPDOWNLIST | WS_TABSTOP
+    CONTROL         "U模式切换=",IDC_FAST_UMODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,120,53,50,10
+    EDITTEXT        IDC_FASTKEY_UMODE,172,52,12,11,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FASTKEY_SENTENCE,172,66,12,11,ES_AUTOHSCROLL
+    LTEXT           "语句模式切换=",IDC_STATIC,119,68,50,8
+    GROUPBOX        "模式切换",IDC_STATIC,113,41,76,41
+    LTEXT           "= U",IDC_STATIC,197,53,13,8
+    LTEXT           "= ;",IDC_STATIC,197,67,13,8
+    GROUPBOX        "拼音中",IDC_STATIC,193,41,27,41,BS_CENTER
+END
+
+IDD_PROP_HOTKEY DIALOG DISCARDABLE  0, 0, 300, 156
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "快捷键"
+FONT 11, "宋体"
+BEGIN
+    CONTROL         "HotKey1",IDC_HOTKEY_SWITCH_MODE,"msctls_hotkey32",
+                    WS_BORDER | WS_TABSTOP,31,7,26,14
+    CONTROL         "HotKey1",IDC_HOTKEY_SWITCH_EN,"msctls_hotkey32",
+                    WS_BORDER | WS_TABSTOP,31,25,26,14
+    CONTROL         "HotKey1",IDC_HOTKEY_QUERY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,163,18,25,14
+    CONTROL         "HotKey1",IDC_HOTKEY_MAKEWORD,"msctls_hotkey32",
+                    WS_BORDER | WS_TABSTOP,31,43,26,14
+    CONTROL         "HotKey1",IDC_HOTKEY_SHOWROOT,"msctls_hotkey32",
+                    WS_BORDER | WS_TABSTOP,31,61,26,14
+    LTEXT           "Ctrl+",IDC_STATIC,7,11,21,8
+    LTEXT           ":编码查询",IDC_STATIC,190,13,35,8
+    LTEXT           ":字根表显示",IDC_STATIC,59,64,43,8
+    LTEXT           "注:所有快捷键都不支持自定义组合键!",IDC_STATIC,7,86,129,
+                    8
+    LTEXT           "Ctrl+Shift+",IDC_STATIC,115,29,45,8
+    LTEXT           ":形码/拼音切换",IDC_STATIC,59,10,54,8
+    LTEXT           ":英文单词输入",IDC_STATIC,59,28,50,8
+    LTEXT           "Ctrl+",IDC_STATIC,7,29,21,8
+    LTEXT           ":剪贴板造词",IDC_STATIC,59,46,43,8
+    LTEXT           "Ctrl+",IDC_STATIC,7,46,21,8
+    LTEXT           "Ctrl+",IDC_STATIC,7,64,21,8
+    LTEXT           "Ctrl+",IDC_STATIC,139,13,21,8
+    LTEXT           ":启程词典",IDC_STATIC,190,29,35,8
+    CONTROL         "HotKey1",IDC_HOTKEY_HIDESTATUS,"msctls_hotkey32",
+                    WS_BORDER | WS_TABSTOP,153,60,26,14
+    LTEXT           ":隐藏状态栏",IDC_STATIC,181,63,43,8
+    LTEXT           "Ctrl+",IDC_STATIC,129,63,21,8
+END
+
+IDD_UDICT_INPUT DIALOG DISCARDABLE  0, 0, 277, 192
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "启程词典[%s]"
+FONT 11, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_KEY,7,7,96,14,ES_AUTOHSCROLL
+    CONTROL         "List1",IDC_LIST_KEY,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | 
+                    LVS_OWNERDATA | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,23,96,162
+    DEFPUSHBUTTON   "输入[Enter]",IDOK,164,171,52,14
+    PUSHBUTTON      "关闭[Esc]",IDCANCEL,218,171,52,14
+    EDITTEXT        IDC_CONVERT,108,24,162,146,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY
+    LTEXT           "注解：",IDC_STATIC,109,10,25,8
+    PUSHBUTTON      "复制",IDC_COPY,230,7,40,14
+END
+
+IDD_PROP_PLUGIN DIALOG DISCARDABLE  0, 0, 231, 127
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "插件"
+FONT 11, "宋体"
+BEGIN
+    LTEXT           "启用插件:",IDC_STATIC,7,8,35,8
+    COMBOBOX        IDC_LIST_PLUGIN,48,7,176,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "版本:",IDC_STATIC,149,26,19,8
+    LTEXT           "描述:",IDC_STATIC,7,40,19,8
+    EDITTEXT        IDC_DESCRIPT,30,39,194,81,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "",IDC_VERSION,170,22,54,13,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "名称:",IDC_STATIC,7,25,19,8
+    LTEXT           "",IDC_NAME,30,22,115,13,SS_CENTERIMAGE | SS_SUNKEN
+END
+
+IDD_PROP_ASSOCIATE DIALOG DISCARDABLE  0, 0, 304, 158
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "智能·联想"
+FONT 11, "宋体"
+BEGIN
+    GROUPBOX        "联想类型",IDC_STATIC,7,7,73,89
+    CONTROL         "禁用",IDC_ASTNULL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,22,31,10
+    CONTROL         "词组联想",IDC_ASTCAND,"Button",BS_AUTORADIOBUTTON,15,39,
+                    43,10
+    CONTROL         "英文单词联想",IDC_ASTENGLISH,"Button",
+                    BS_AUTORADIOBUTTON,15,56,64,10
+    CONTROL         "已有词组提示",IDC_PHRASEREMIND,"Button",
+                    BS_AUTORADIOBUTTON,15,73,64,10
+    GROUPBOX        "词频调整",IDC_STATIC,85,7,61,64
+    CONTROL         "禁用",IDC_RATE_DISABLE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,93,23,31,10
+    CONTROL         "智能调频",IDC_RATE_AUTO,"Button",BS_AUTORADIOBUTTON,93,
+                    39,46,10
+    CONTROL         "快速调频",IDC_RATE_QUICK,"Button",BS_AUTORADIOBUTTON,93,
+                    55,46,10
+    GROUPBOX        "全码词组预测",IDC_STATIC,150,7,73,64
+    CONTROL         "禁用",IDC_FORECAST_DISABLE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,159,23,31,10
+    CONTROL         "总是启用",IDC_FORECAST_ALWAYS,"Button",
+                    BS_AUTORADIOBUTTON,159,39,46,10
+    CONTROL         "无重码时启用",IDC_FORECAST_NOCAND,"Button",
+                    BS_AUTORADIOBUTTON,159,55,61,10
+    CONTROL         "语句联想",IDC_ASTSENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,88,44,10
+    CONTROL         "智能小数点",IDC_AUTODOT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,85,75,54,10
+    CONTROL         "智能编码提示",IDC_AUTOPROMPT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,75,61,10
+    CONTROL         "智能选词",IDC_AUTOMATCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,85,88,46,10
+    EDITTEXT        IDC_WEB_HEADER,46,103,177,14,ES_AUTOHSCROLL
+    LTEXT           "智能网址:",IDC_STATIC,7,105,35,8
+END
+
+IDD_SKIN_MANAGER DIALOG DISCARDABLE  0, 0, 217, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "皮肤管理"
+FONT 11, "宋体"
+BEGIN
+    PUSHBUTTON      "退   出",IDCANCEL,160,181,50,14
+    CONTROL         "List1",IDC_LIST_SKIN,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,7,148,188
+    DEFPUSHBUTTON   "选   用",IDOK,160,7,50,14
+    PUSHBUTTON      "编   辑",IDC_SKIN_EDIT,160,24,50,14
+    PUSHBUTTON      "皮肤目录",IDC_SKIN_DIR,160,41,50,14
+    PUSHBUTTON      "删   除",IDC_SKIN_DEL,160,58,50,14
+    PUSHBUTTON      "刷   新",IDC_SKIN_REFRESH,160,77,50,14
+END
+
+IDD_PROP_CANDMODE DIALOG DISCARDABLE  0, 0, 300, 156
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "重码相关"
+FONT 11, "宋体"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,89,44
+    CONTROL         "快捷2,3重码",IDC_23CANDKEY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,7,53,10
+    CONTROL         "HotKey1",IDC_HOTKEY_2CAND,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,48,17,41,14
+    CONTROL         "HotKey1",IDC_HOTKEY_3CAND,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,48,33,41,14
+    GROUPBOX        "重码翻页",IDC_STATIC,107,7,89,44
+    CONTROL         "HotKey1",IDC_HOTKEY_CAND_PAGEUP,"msctls_hotkey32",
+                    WS_BORDER | WS_TABSTOP,148,17,41,14
+    CONTROL         "HotKey1",IDC_HOTKEY_CAND_PAGEDOWN,"msctls_hotkey32",
+                    WS_BORDER | WS_TABSTOP,148,33,41,14
+    LTEXT           "第2重码:",IDC_STATIC,14,21,32,8
+    LTEXT           "第3重码:",IDC_STATIC,14,35,32,8
+    LTEXT           "前翻页:",IDC_STATIC,115,19,28,8
+    LTEXT           "后翻页:",IDC_STATIC,115,36,28,8
+    EDITTEXT        IDC_PAGECANDS,52,66,19,13,ES_READONLY
+    CONTROL         "Spin1",IDC_SPIN_PAGECANDS,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,67,65,9,
+                    14
+    LTEXT           "一屏重码数:",IDC_STATIC,7,68,43,8
+    CONTROL         "禁止数字键选择重码(五笔有效)",IDC_CANDSEL_NONUM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,82,60,122,10
+    GROUPBOX        "GBK重码",IDC_STATIC,7,86,190,34
+    CONTROL         "显示唯一重码",IDC_GBK_HIDE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,13,101,61,10
+    CONTROL         "显示手动上屏",IDC_GBK_SHOWI,"Button",BS_AUTORADIOBUTTON,
+                    74,101,61,10
+    CONTROL         "显示正常上屏",IDC_GBK_SHOWA,"Button",BS_AUTORADIOBUTTON,
+                    135,101,61,10
+    CONTROL         "出简不出全(五笔有效)",IDC_ONLYSIMPLECODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,82,75,92,10
+END
+
+IDD_PROP_WNDEFFECT DIALOG DISCARDABLE  0, 0, 295, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "窗口特效"
+FONT 11, "宋体"
+BEGIN
+    LTEXT           "渐显隐速度:",IDC_STATIC,12,61,43,8
+    EDITTEXT        IDC_FADE_STEPS,59,58,24,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "▼",IDC_FADE_STEP_MENU,83,58,10,14
+    EDITTEXT        IDC_TRANS_STATUS,150,23,24,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_TRANS_STATUS,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,168,24,
+                    9,14
+    LTEXT           "透明度:",IDC_STATIC,26,25,28,8
+    EDITTEXT        IDC_TRANS_INPUT,58,23,24,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_TRANS_INPUT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,75,23,9,
+                    14
+    CONTROL         "阴影:",IDC_SHADE_INPUT,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,33,44,35,10
+    CONTROL         "阴影:",IDC_SHADE_STATUS,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,120,42,35,10
+    GROUPBOX        "输入栏",IDC_STATIC,7,7,94,72
+    GROUPBOX        "状态栏",IDC_STATIC,110,7,77,51
+    LTEXT           "透明度:",IDC_STATIC,114,25,28,8
+    LTEXT           "*阴影效果改变重启后生效！",IDC_STATIC,109,69,95,8
+    LTEXT           "%",IDC_STATIC,177,26,8,8
+    LTEXT           "%",IDC_STATIC,84,26,8,8
+END
+
+IDD_PROP_OTHER DIALOG DISCARDABLE  0, 0, 270, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "其它"
+FONT 11, "宋体"
+BEGIN
+    CONTROL         "显示操作提示",IDC_SHOWTIP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,143,12,61,10
+    EDITTEXT        IDC_LINEKEY1,34,51,14,13,ES_LOWERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_LINEKEY2,75,51,14,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LINEKEY3,115,51,14,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LINEKEY4,34,69,14,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LINEKEY5,75,69,14,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LINEKEY6,115,69,14,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "颜色",IDC_BTN_PHONTICCOLOR,13,17,22,14
+    EDITTEXT        IDC_PHONTIC_LEFT,76,17,17,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PHONTIC_RIGHT,113,17,17,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "笔画输入键表(拼音状态有效)",IDC_STATIC,7,39,131,48
+    LTEXT           "横 =",IDC_STATIC,15,54,18,8
+    LTEXT           "竖 =",IDC_STATIC,55,54,18,8
+    LTEXT           "撇 =",IDC_STATIC,97,54,18,8
+    LTEXT           "捺 =",IDC_STATIC,15,71,18,8
+    LTEXT           "折 =",IDC_STATIC,55,71,18,8
+    LTEXT           "",IDC_CR_PNTC,39,19,11,11,SS_SUNKEN
+    GROUPBOX        "音标输入",IDC_STATIC,7,7,131,28
+    LTEXT           "格式:",IDC_STATIC,54,20,20,8
+    LTEXT           "音标",IDC_STATIC,95,20,16,8
+    LTEXT           "? =",IDC_STATIC,100,71,15,8
+    CONTROL         "语音校对",IDC_TTS_INPUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,143,25,46,10
+    CONTROL         "禁止删除\n单字重码",IDC_DELWORD_DISABLE,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,143,54,43,20
+    GROUPBOX        "提示音",IDC_STATIC,7,91,131,28
+    CONTROL         "蜂鸣器",IDC_SOUND_BEEP,"Button",BS_AUTORADIOBUTTON,15,
+                    103,39,10
+    CONTROL         "WAV音",IDC_SOUND_WAV,"Button",BS_AUTORADIOBUTTON,58,103,
+                    36,10
+    CONTROL         "禁用",IDC_SOUND_DISABLE,"Button",BS_AUTORADIOBUTTON,97,
+                    103,31,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_PROP_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_PROP_CUSTOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_PROP_HOTKEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_UDICT_INPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 185
+    END
+
+    IDD_PROP_PLUGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_PROP_ASSOCIATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_SKIN_MANAGER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_PROP_CANDMODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_PROP_WNDEFFECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_PROP_OTHER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MYHAND              CURSOR  DISCARDABLE     "res\\Hand.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_COMPICON            BITMAP  MOVEABLE PURE   "res\\compicon.bmp"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,8,1,3
+ PRODUCTVERSION 2,8,1,3
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x3L
+ FILESUBTYPE 0xbL
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Setoutsoft\0"
+            VALUE "FileDescription", "启程五笔 版本2.8\0"
+            VALUE "FileVersion", "2, 8, 1, 3\0"
+            VALUE "InternalName", "sowb.ime\0"
+            VALUE "LegalCopyright", "Copyright ? 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "sowb.ime\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "启程输入之星　五笔优化版\0"
+            VALUE "ProductVersion", "2, 8, 1, 3\0"
+            VALUE "SpecialBuild", "35\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_FADESTEPS MENU DISCARDABLE 
+BEGIN
+    POPUP "_fadestep_"
+    BEGIN
+        MENUITEM "禁用",                        IDM_FS_NOFADE
+        MENUITEM "快速",                        IDM_FS_FAST
+        MENUITEM "中速",                        IDM_FS_MIDDLE
+        MENUITEM "较慢",                        IDM_FS_SLOW
+        MENUITEM "最慢",                        IDM_FS_SLOWEST
+    END
+END
+
+IDR_SYSMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "menu"
+    BEGIN
+        MENUITEM "系统设置",                    IDM_CONFIG
+        POPUP "快捷设置"
+        BEGIN
+            MENUITEM "<无>",                        ID_BATCH_SETTINGS1
+        END
+        MENUITEM "隐藏状态",                    IDM_HIDESTATUS
+        MENUITEM "光标跟随",                    IDM_MOUSEFOLLOW
+        MENUITEM "输出繁体",                    IDM_INPUTBIG5
+        MENUITEM SEPARATOR
+        POPUP "特殊字符"
+        BEGIN
+            MENUITEM "<empty>",                     ID_SPCHAR_FIRST
+        END
+        POPUP "皮    肤"
+        BEGIN
+            MENUITEM "皮肤管理",                    ID_SKIN_MANAGER
+            MENUITEM "随机皮肤",                    ID_SKIN_RANDOM
+            MENUITEM "重码竖排",                    ID_SKIN_VERTICAL
+            MENUITEM "网上皮肤",                    ID_SKIN_WEB
+            MENUITEM SEPARATOR
+        END
+        POPUP "启程词典"
+        BEGIN
+            MENUITEM "词典输入",                    ID_UDICT_INPUT
+            MENUITEM SEPARATOR
+            MENUITEM "关闭",                        ID_UDICT_CLOSE
+            MENUITEM SEPARATOR
+        END
+        POPUP "编码方案"
+        BEGIN
+            MENUITEM "<Empty>",                     ID_COMP_FIRST
+        END
+        POPUP "形码混输"
+        BEGIN
+            MENUITEM "拼音:单字",                   ID_BLEND_SP_WORD
+            MENUITEM SEPARATOR
+            MENUITEM "拼音:二字词",                 ID_BLEND_SP_CE2
+            MENUITEM "拼音:三字词",                 ID_BLEND_SP_CE3
+            MENUITEM "拼音:多字词",                 ID_BLEND_SP_CA4
+            MENUITEM SEPARATOR
+            MENUITEM "自定义短语",                  ID_BLEND_USERDEF
+        END
+        MENUITEM SEPARATOR
+        POPUP "数据管理"
+        BEGIN
+            MENUITEM "后台运行指示",                IDM_SVR_TRAY
+        END
+        MENUITEM "字 根 表",                    IDM_KEYMAP
+        MENUITEM "打字速度",                    IDM_SPEED
+        MENUITEM SEPARATOR
+        MENUITEM "查看帮助",                    IDM_HELP
+    END
+    POPUP "hide"
+    BEGIN
+        MENUITEM "造词",                        IDM_MAKEPHRASE
+        MENUITEM "编码切换",                    IDM_IMCHANGE
+        MENUITEM "编码查询",                    IDM_QUERYCOMP
+        MENUITEM "skin set",                    IDM_SKIN_SET
+    END
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,292 @@
+# Microsoft Developer Studio Generated Dependency File, included by sinstar2.mak
+
+.\config.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\hyperlink.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\image.c : \
+	"..\include\helper.h"\
+	"..\include\png32_helper.h"\
+	".\image.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\imm.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\udictinput.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\immex.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\optip.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\regword.c : \
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\SimButton.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\sinstar2.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\sinstar2.rc : \
+	".\res\compicon.bmp"\
+	".\res\Hand.cur"\
+	".\res\settings.ico"\
+	".\res\sinstar2.ICO"\
+	
+
+.\skin.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinmanager.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\SoPlugin.c : \
+	".\pluginmsg.h"\
+	".\SoPlugin.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\tooltip.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\udictinput.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\udictinput.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ui.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\udictinput.h"\
+	".\ui.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\uispchar.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\uisub.c : \
+	"..\include\commfile.h"\
+	"..\include\helper.h"\
+	"..\include\htmlhelp.h"\
+	"..\include\iscomm.h"\
+	"..\include\isprotocol.h"\
+	"..\include\png32_helper.h"\
+	".\config.h"\
+	".\image.h"\
+	".\optip.h"\
+	".\pluginmsg.h"\
+	".\SimButton.h"\
+	".\sinstar2.h"\
+	".\skin.h"\
+	".\SoPlugin.h"\
+	".\tooltip.h"\
+	".\udictinput.h"\
+	".\ui.h"\
+	".\uispchar.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

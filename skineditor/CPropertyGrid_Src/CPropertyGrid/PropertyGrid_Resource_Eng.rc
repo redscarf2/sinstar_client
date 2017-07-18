@@ -1,0 +1,41 @@
+
+#include "PropertyGrid_Resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+PG_IDC_HSPLITBAR        CURSOR  DISCARDABLE     "res\\propgrid_splith.cur"
+PG_IDC_VSPLITBAR        CURSOR  DISCARDABLE     "res\\propgrid_splitv.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+PG_IDR_PROPGRID_TBAR    BITMAP  DISCARDABLE     "res\\propgrid_tbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+PG_IDR_PROPGRID_TBAR TOOLBAR MOVEABLE PURE  16, 16
+BEGIN
+    BUTTON      PG_IDC_SORT_CATEGORIZED
+    BUTTON      PG_IDC_SORT_ALPHABETIC
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    PG_IDC_SORT_CATEGORIZED "Categorized"
+    PG_IDC_SORT_ALPHABETIC  "Alphabetic"
+END
+
+
