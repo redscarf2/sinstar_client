@@ -903,97 +903,100 @@ void InputWnd_OnCalcSize(HWND hWnd,WPARAM wParam,LPARAM lParam)
 		HGLOBAL hUiPriv=(HGLOBAL)GetWindowLongPtr(hUIWnd,IMMGWLP_PRIVATE);
 		LPUIPRIV lpUiPriv=(LPUIPRIV)GlobalLock(hUiPriv);
 		LPINPUTCONTEXT lpIMC=(LPINPUTCONTEXT)ImmLockIMC(hIMC);
-		LPCONTEXTPRIV lpCntxtPriv=(LPCONTEXTPRIV)ImmLockIMCC(lpIMC->hPrivate);
-		POINT pt=g_SettingsL.bMouseFollow?g_ptInputPos:lpUiPriv->ptInputWnd;
-		HDC hdc=GetDC(hWnd);
-		HGDIOBJ hOldFont=SelectObject(hdc,g_SkinInput.hFont);
-		RECT rcWorkArea,rcWnd;
-		SIZE sizeWnd;
-		int nLineHei=16;
 		if(lpIMC)
-		{//获得字体高度
+		{//可能获取不到IMC, 这里直接退出
+			LPCONTEXTPRIV lpCntxtPriv=(LPCONTEXTPRIV)ImmLockIMCC(lpIMC->hPrivate);
+			POINT pt=g_SettingsL.bMouseFollow?g_ptInputPos:lpUiPriv->ptInputWnd;
+			HDC hdc=GetDC(hWnd);
+			HGDIOBJ hOldFont=SelectObject(hdc,g_SkinInput.hFont);
+			RECT rcWorkArea,rcWnd;
+			SIZE sizeWnd;
+			int nLineHei=16;
+			//获得字体高度
 			if(lpIMC->lfFont.A.lfHeight!=0)
 				nLineHei=abs(lpIMC->lfFont.A.lfHeight);
 			else if(lpIMC->lfFont.A.lfWidth!=0)
 				nLineHei=2*abs(lpIMC->lfFont.A.lfWidth);
-		}
-		if(wParam==0)
-		{//需要计算窗口大小
-			s_bInputVertical=FALSE;
-			if(g_SettingsG.bIptWndVertical 
-				&& g_SkinInput.modeVertical.pImgBack
-				&& g_CompMode==IM_SHAPECODE
-				&& (lpCntxtPriv->sbState==SBST_NORMAL || (lpCntxtPriv->sCandCount==0 || lpCntxtPriv->sSentLen==0)))
-				s_bInputVertical=TRUE;
+			if(wParam==0)
+			{//需要计算窗口大小
+				s_bInputVertical=FALSE;
+				if(g_SettingsG.bIptWndVertical 
+					&& g_SkinInput.modeVertical.pImgBack
+					&& g_CompMode==IM_SHAPECODE
+					&& (lpCntxtPriv->sbState==SBST_NORMAL || (lpCntxtPriv->sCandCount==0 || lpCntxtPriv->sSentLen==0)))
+					s_bInputVertical=TRUE;
 
-			memset(lpCntxtPriv->rcCand,0,10*sizeof(RECT));
-			SetRect(&lpCntxtPriv->rcHeader,0,0,0,0);
-			SetRect(&lpCntxtPriv->rcTip,-1,-1,-1,-1);
-			SetRect(&lpCntxtPriv->rcSent,0,0,0,0);
-			SetRect(&lpCntxtPriv->rcCharMode,0,0,0,0);
-			if(s_bInputVertical)
-			{
-				SIZE size;
-				GetTextExtentPoint(hdc,"A",1,&size);
-				sizeWnd.cx=g_SkinInput.modeVertical.size.cx;
-				sizeWnd.cy=InputWnd_CalcCandVert(hWnd,hdc,lpCntxtPriv);
-				sizeWnd.cy=max(sizeWnd.cy,g_SkinInput.modeVertical.size.cy); 
+				memset(lpCntxtPriv->rcCand,0,10*sizeof(RECT));
+				SetRect(&lpCntxtPriv->rcHeader,0,0,0,0);
+				SetRect(&lpCntxtPriv->rcTip,-1,-1,-1,-1);
+				SetRect(&lpCntxtPriv->rcSent,0,0,0,0);
+				SetRect(&lpCntxtPriv->rcCharMode,0,0,0,0);
+				if(s_bInputVertical)
+				{
+					SIZE size;
+					GetTextExtentPoint(hdc,"A",1,&size);
+					sizeWnd.cx=g_SkinInput.modeVertical.size.cx;
+					sizeWnd.cy=InputWnd_CalcCandVert(hWnd,hdc,lpCntxtPriv);
+					sizeWnd.cy=max(sizeWnd.cy,g_SkinInput.modeVertical.size.cy); 
+				}else
+				{
+					int nCandWid=InputWnd_CalcCandHorz(hWnd,hdc,lpCntxtPriv);
+					int nCompWid= InputWnd_CalcCompWid(hWnd,hdc,lpCntxtPriv);
+					sizeWnd.cx=max(nCandWid,nCompWid);
+					sizeWnd.cx=max(sizeWnd.cx,g_SkinInput.modeHerizontal.size.cx);
+					sizeWnd.cy=g_SkinInput.modeHerizontal.size.cy;
+					if(g_SkinInput.hBmp32CharMode)
+					{//有标点图标
+						int nRight=sizeWnd.cx-g_SkinInput.modeHerizontal.rcMargin.right-g_SkinInput.modeHerizontal.nCompRight;
+						SIZE szIcon=Helper_GetBMPSize(g_SkinInput.hBmp32CharMode);
+						SetRect(&lpCntxtPriv->rcCharMode,
+							nRight-szIcon.cx/2,
+							g_SkinInput.modeHerizontal.rcMargin.top+(g_SkinInput.modeHerizontal.nCompHei-szIcon.cy)/2,
+							nRight,
+							g_SkinInput.modeHerizontal.rcMargin.top+(g_SkinInput.modeHerizontal.nCompHei-szIcon.cy)/2+szIcon.cy);
+					}
+				}
+
 			}else
+			{//位置改变
+				GetClientRect(hWnd,&rcWnd);
+				sizeWnd.cx=rcWnd.right;
+				sizeWnd.cy=rcWnd.bottom;
+			}
+			SelectObject(hdc,hOldFont);
+			ReleaseDC(hWnd,hdc);
+
+			SystemParametersInfo(SPI_GETWORKAREA,0,&rcWorkArea,0);
+			if(pt.x==-1 && pt.y==-1)
 			{
-				int nCandWid=InputWnd_CalcCandHorz(hWnd,hdc,lpCntxtPriv);
-				int nCompWid= InputWnd_CalcCompWid(hWnd,hdc,lpCntxtPriv);
-				sizeWnd.cx=max(nCandWid,nCompWid);
-				sizeWnd.cx=max(sizeWnd.cx,g_SkinInput.modeHerizontal.size.cx);
-				sizeWnd.cy=g_SkinInput.modeHerizontal.size.cy;
-				if(g_SkinInput.hBmp32CharMode)
-				{//有标点图标
-					int nRight=sizeWnd.cx-g_SkinInput.modeHerizontal.rcMargin.right-g_SkinInput.modeHerizontal.nCompRight;
-					SIZE szIcon=Helper_GetBMPSize(g_SkinInput.hBmp32CharMode);
-					SetRect(&lpCntxtPriv->rcCharMode,
-						nRight-szIcon.cx/2,
-						g_SkinInput.modeHerizontal.rcMargin.top+(g_SkinInput.modeHerizontal.nCompHei-szIcon.cy)/2,
-						nRight,
-						g_SkinInput.modeHerizontal.rcMargin.top+(g_SkinInput.modeHerizontal.nCompHei-szIcon.cy)/2+szIcon.cy);
+				GetCaretPos(&pt);
+				if(pt.x==0 && pt.y==0)
+				{
+					pt=lpUiPriv->ptInputWnd;
+				}
+				else
+				{
+					ClientToScreen(lpIMC->hWnd,&pt);
 				}
 			}
+			pt.y+=nLineHei*15/10;
+			if(pt.x+sizeWnd.cx>rcWorkArea.right) 
+				pt.x=rcWorkArea.right-sizeWnd.cx;
+			if(pt.y+sizeWnd.cy>rcWorkArea.bottom)
+				pt.y-=sizeWnd.cy+nLineHei*2;
+			GetClientRect(hWnd,&rcWnd);// Get window's size of original state
+			SetWindowPos(hWnd,NULL,pt.x,pt.y,sizeWnd.cx,sizeWnd.cy,SWP_NOZORDER|SWP_NOACTIVATE);
+			if(lParam || rcWnd.right!=sizeWnd.cx || rcWnd.bottom!=sizeWnd.cy)
+				InputWnd_SetRgn(hWnd,s_bInputVertical);
 
-		}else
-		{//位置改变
-			GetClientRect(hWnd,&rcWnd);
-			sizeWnd.cx=rcWnd.right;
-			sizeWnd.cy=rcWnd.bottom;
+			ImmUnlockIMCC(lpIMC->hPrivate);
+			ImmUnlockIMC(hIMC);
+
+			InvalidateRect(hWnd,NULL,TRUE);
 		}
-		SelectObject(hdc,hOldFont);
-		ReleaseDC(hWnd,hdc);
 
-		SystemParametersInfo(SPI_GETWORKAREA,0,&rcWorkArea,0);
-		if(pt.x==-1 && pt.y==-1)
-		{
-			GetCaretPos(&pt);
-			if(pt.x==0 && pt.y==0)
-			{
-				pt=lpUiPriv->ptInputWnd;
-			}
-			else
-			{
-				ClientToScreen(lpIMC->hWnd,&pt);
-			}
-		}
-		pt.y+=nLineHei*15/10;
-		if(pt.x+sizeWnd.cx>rcWorkArea.right) 
-			pt.x=rcWorkArea.right-sizeWnd.cx;
-		if(pt.y+sizeWnd.cy>rcWorkArea.bottom)
-			pt.y-=sizeWnd.cy+nLineHei*2;
-		GetClientRect(hWnd,&rcWnd);// Get window's size of original state
-		SetWindowPos(hWnd,NULL,pt.x,pt.y,sizeWnd.cx,sizeWnd.cy,SWP_NOZORDER|SWP_NOACTIVATE);
-		if(lParam || rcWnd.right!=sizeWnd.cx || rcWnd.bottom!=sizeWnd.cy)
-			InputWnd_SetRgn(hWnd,s_bInputVertical);
-
-		ImmUnlockIMCC(lpIMC->hPrivate);
-		ImmUnlockIMC(hIMC);
 		GlobalUnlock(hUiPriv);
 
-		InvalidateRect(hWnd,NULL,TRUE);
 	}
 }
 

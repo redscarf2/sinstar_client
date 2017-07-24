@@ -53,8 +53,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,9,0,1
- PRODUCTVERSION 2,9,0,1
+ FILEVERSION 2,9,0,2
+ PRODUCTVERSION 2,9,0,2
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x21L
@@ -71,13 +71,13 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Setoutsoft"
             VALUE "FileDescription", "启程输入之星 版本2.8"
-            VALUE "FileVersion", "2, 9, 0, 1"
+            VALUE "FileVersion", "2, 9, 0, 2"
             VALUE "InternalName", "sinstar2"
             VALUE "LegalCopyright", "Copyright ? 2014"
             VALUE "OriginalFilename", "sinstar2.ime"
             VALUE "ProductName", "Setoutsoft sinstar2"
-            VALUE "ProductVersion", "2, 9, 0, 1"
-            VALUE "SpecialBuild", "35"
+            VALUE "ProductVersion", "2, 9, 0, 2"
+            VALUE "SpecialBuild", "0"
         END
     END
     BLOCK "VarFileInfo"
