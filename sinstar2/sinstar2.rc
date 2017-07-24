@@ -53,8 +53,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,8,1,7
- PRODUCTVERSION 2,8,1,7
+ FILEVERSION 2,9,0,1
+ PRODUCTVERSION 2,9,0,1
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x21L
@@ -71,12 +71,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Setoutsoft"
             VALUE "FileDescription", "启程输入之星 版本2.8"
-            VALUE "FileVersion", "2, 8, 1, 7"
+            VALUE "FileVersion", "2, 9, 0, 1"
             VALUE "InternalName", "sinstar2"
             VALUE "LegalCopyright", "Copyright ? 2014"
             VALUE "OriginalFilename", "sinstar2.ime"
             VALUE "ProductName", "Setoutsoft sinstar2"
-            VALUE "ProductVersion", "2, 8, 1, 7"
+            VALUE "ProductVersion", "2, 9, 0, 1"
             VALUE "SpecialBuild", "35"
         END
     END
@@ -113,7 +113,7 @@ BEGIN
     LTEXT           "2.0.0.1",IDC_VER_IME,76,8,46,8
     LTEXT           "启程软件:因为努力,所以美丽!",IDC_STATIC,7,36,103,8
     LTEXT           "版权所有(C):启程软件 2004-2017",IDC_STATIC,7,80,138,8
-    CTEXT           "与狼共舞\n玉树临风\n晴天",IDC_STATIC,140,22,58,33
+    CTEXT           "与狼共舞\n玉树临风\n晴天\n木已成舟",IDC_STATIC,140,22,58,33
     GROUPBOX        "感谢",IDC_STATIC,128,7,95,53,BS_CENTER
     ICON            IDI_FLAG,IDC_STATIC,7,7,20,20
     LTEXT           "http://www.setoutsoft.cn",IDC_HOMESITE,7,50,97,8
