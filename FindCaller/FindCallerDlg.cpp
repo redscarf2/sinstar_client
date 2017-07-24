@@ -54,6 +54,13 @@ BOOL CFindCallerDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
+#ifdef _WIN64
+	CString strTitle;
+	GetWindowText(strTitle);
+	strTitle += _T("[x64]");
+	SetWindowText(strTitle);
+#endif
+
 	// Set the icon for this dialog.  The framework does this automatically
 	//  when the application's main window is not a dialog
 	SetIcon(m_hIcon, TRUE);			// Set big icon

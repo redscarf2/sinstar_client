@@ -228,7 +228,7 @@ void VerDot2Space(TCHAR *pszVer)
 BOOL CheckVersion(TCHAR *pszVerNew,TCHAR *pszVerCur)
 {
 	DWORD dwVerCur=0,dwVerNew=0;
-	BYTE byVer1,byVer2,byVer3,byVer4;
+	int byVer1,byVer2,byVer3,byVer4;
 	VerDot2Space(pszVerNew);
 	VerDot2Space(pszVerCur);
 	_stscanf(pszVerCur,_T("%u %u %u %u"),&byVer1,&byVer2,&byVer3,&byVer4);
@@ -259,6 +259,15 @@ BOOL Sinstar_Update(LPCTSTR pszIme)
 			PROCESS_INFORMATION pi={0};
 			_stprintf(szPath1,_T("findcaller.exe %s\\%s.ime"),szSysPath,pszIme);
 			if(CreateProcess(_T("findcaller.exe"),szPath1,NULL,NULL,FALSE,0,NULL,NULL,&si,&pi))
+			{
+				CloseHandle(pi.hThread);
+				CloseHandle(pi.hProcess);
+			}else
+			{
+				MessageBox(GetActiveWindow(),_T("启动程序失败"),_T("提示"),MB_OK|MB_ICONSTOP);
+			}
+			_stprintf(szPath1,_T("findcaller_x64.exe %s\\%s.ime"),szSysPath,pszIme);
+			if(CreateProcess(_T("findcaller_x64.exe"),szPath1,NULL,NULL,FALSE,0,NULL,NULL,&si,&pi))
 			{
 				CloseHandle(pi.hThread);
 				CloseHandle(pi.hProcess);
